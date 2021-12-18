@@ -1,0 +1,43 @@
+<ion-header mode="ios">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button
+        text="Regresar"
+        color="primary"
+        mode="ios"
+        defaultHref="/"
+      ></ion-back-button>
+    </ion-buttons>
+    <ion-title color="success" class="ion-text-capitalize">Popover</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="presentPopover( $event )">
+        <ion-icon
+          slot="icon-only"
+          name="person-outline"
+          color="primary"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark" class="ion-padding" mode="ios">
+  <ion-button (click)="presentPopover( $event )" expand="block" shape="round">
+    Popover
+  </ion-button>
+</ion-content>
+
+<ion-footer mode="ios">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-button (click)="presentPopover( $event )">
+        <ion-icon
+          slot="icon-only"
+          name="person-outline"
+          color="primary"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>

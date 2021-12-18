@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button text="Regresar" color="primary" mode="ios" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="success" class="ion-text-capitalize">Avatar</ion-title>
+ <ion-buttons slot="end">
+   <ion-avatar>
+     <!--<img src="/assets/anne-hathaway.jpg" />-->
+ <ion-img src="/assets/anne-hathaway.jpg"></ion-img>
+<!--ion-img se carga con lazyload, bajo demanda--->  
+</ion-avatar>
+ </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+<ion-avatar>
+  <img src="/assets/anne-hathaway.jpg" />
+</ion-avatar>
+
+<ion-chip color="primary" *ngFor="let item of [1,1,1,1,1,1]">
+  <ion-avatar>
+    <img src="/assets/anne-hathaway.jpg">
+  </ion-avatar>
+  <ion-label>Anne Hathaway</ion-label>
+</ion-chip>
+
+
+<ion-item >
+  <ion-avatar slot="start">
+    <img src="/assets/anne-hathaway.jpg" />
+  </ion-avatar>
+<ion-label>Anne Hathaway</ion-label>
+</ion-item>
+
+<ion-item *ngFor="let item of [1,1,1,1,1,1]">
+  <ion-avatar slot="start">
+    <img src="/assets/anne-hathaway.jpg" />
+  </ion-avatar>
+<ion-label>Anne Hathaway</ion-label>
+</ion-item>
+</ion-content>

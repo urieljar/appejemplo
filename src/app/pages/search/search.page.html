@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button text="Regresar" color="primary" mode="ios" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="success" class="ion-text-capitalize">Search</ion-title>
+  </ion-toolbar>
+  <ion-searchbar placeholder="Buscar"
+                  inputmode="text"
+                  (ionChange)="onSearchChange( $event )"
+                  [debounce]="250">
+  </ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor= "let album of albums | filtro:textoBuscar:'title'">
+      <ion-label>{{album.title}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

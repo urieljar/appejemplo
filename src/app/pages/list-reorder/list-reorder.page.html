@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button text="Regresar" color="primary" mode="ios" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="success" class="ion-text-capitalize">List Reorder</ion-title>
+     <ion-buttons slot="end">
+       <ion-button (click)="reOrdenar()">
+         <ion-icon slot="icon-only" name="reorder-three-outline" color="primary"></ion-icon>  
+       </ion-button>
+     </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-list>
+  <ion-reorder-group (ionItemReorder)="doReorder($event)" [disabled]="reorder">
+   <ion-item *ngFor="let e of elementos">
+     <ion-label>{{e}}</ion-label>
+     <ion-reorder slot="end">
+       <ion-icon name="pizza"></ion-icon>
+     </ion-reorder>
+   </ion-item>
+  </ion-reorder-group>
+</ion-list>
+</ion-content>
